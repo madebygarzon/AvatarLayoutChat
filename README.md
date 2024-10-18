@@ -41,10 +41,6 @@ To run the project locally, follow these steps:
 - **Accessibility**: Semantic HTML tags and appropriate ARIA labels are used to ensure better accessibility for all users.
 - **Performance Optimization**: Code is optimized for faster load times and smooth user experience.
 
-## Contributions
-
-Contributions are welcome! If you'd like to improve the project, feel free to submit a pull request or open an issue.
-
 ## License
 
 This project is licensed under the MIT License.
