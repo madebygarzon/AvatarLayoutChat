@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat UI</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+  <header class="chat-header">
+    <div class="menu-hamburguer">
+      <img class="menu-hamburguer-icon" src="assets/icon_menu_hamburguer.svg" alt="Menu hamburguer">
+    </div>
+    <div class="logo-brand-section">
+      <div class="logo-brand">
+        <img class="logo-image" src="assets/logo_image.webp" alt="Logobrand">
+        <p class="logo-text">Logobrand</p>
+      </div>
+      <div class="divider"></div>
+      <p class="header-text">Avatar Buddy Demo</p>
+    </div>
+    <div class="user-info" id="user-info">
+      <p class="user-name-info-section">Hi, <span class="user-name-info">Nico Buddy!</span></p>
+      <img class="user-avatar" src="assets/icon_user_register.svg" alt="User Avatar">
+    </div>
+  </header>
+  <div class="overlay" id="overlay" style="display: none;"></div>
+  <div class="overlay" id="overlay2" style="display: none;"></div>
+  <div class="popup-user-info" id="popup-user-info" style="display: none;">
+    <img class="icon-edit-avatar" src="assets/icon_edit_avatar.svg" alt="Edit Avatar">
+    <img class="popup-user-avatar" src="assets/icon_user_register_sidebar.svg" alt="User Avatar">
+    <p class="popup-user-name">Lorem Ipsum</p>
+    <button class="popup-button-first">Lorem Ipsum</button>
+    <button class="popup-button-second">Lorem Ipsum</button>
+    <div class="separator-popup"></div>
+    <p class="sign-out-popup">Sign out</p>
+  </div>
+  <div id="sidebar" class="sidebar">
+    <div class="header-sidebar">
+      <img class="avatar-sidebar" src="assets/icon_user_register_sidebar.svg" alt="User Avatar">
+      <p class="user-name-sidebar"><span class="text-user-sidebar">Hi Buddy,</span><br>this is your<br>control panel</p>
+    </div>
+    <div class="body-sidebar">
+      <p>Choose your Buddy</p>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <img class="avatar-choose-buddy" src="assets/icon_choose_buddy.svg" alt="Avatar">
+          Dr. Jaquie <img class="icon-arrow-down" src="assets/icon_arrow_down.svg" alt="Arrow Down">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Buddy Number 1</a>
+          <a href="#">Buddy Number 2</a>
+          <a href="#">Buddy Number 3</a>
+          <a href="#">Buddy Number 4</a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <p>Choose voice</p>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <img class="avatar-choose-buddy" src="assets/icon_choose_buddy.svg" alt="Avatar">
+          Dr. Jaquie <img class="icon-arrow-down" src="assets/icon_arrow_down.svg" alt="Arrow Down">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Buddy Number 1</a>
+          <a href="#">Buddy Number 2</a>
+          <a href="#">Buddy Number 3</a>
+          <a href="#">Buddy Number 4</a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="body-sidebar-tools">
+        <div class="sound-sidebar">
+          <div class="sound-sidebar-title">
+            <p>Sound</p>
+            <img src="assets/icon_sound.svg" alt="Sound">
+          </div>
+          <div class="switch" id="switch-sound"></div>
+        </div>
+        <div class="separator-v"></div>
+        <div class="mode-sidebar">
+          <div class="mode-sidebar-title">
+            <p>Light mode</p>
+            <img src="assets/icon_light.svg" alt="Light">
+          </div>
+          <div class="switch" id="switch-mode"></div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <p>Accesibility features</p>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <img class="avatar-choose-buddy" src="assets/icon_choose_bg.svg" alt="Avatar">
+          All text <img class="icon-arrow-down" src="assets/icon_arrow_down.svg" alt="Arrow Down">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Buddy Number 1</a>
+          <a href="#">Buddy Number 2</a>
+          <a href="#">Buddy Number 3</a>
+          <a href="#">Buddy Number 4</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-sidebar">
+      <img class="icon-user" src="assets/icon_user.svg" alt="User">
+      <div class="separator-v-footer"></div>
+      <img class="icon-trash" src="assets/icon_trash.svg" alt="Trash">
+      <div class="separator-v-footer"></div>
+      <img class="icon-exit" src="assets/icon_exit.svg" alt="Exit">
+    </div>
+  </div>
+  <div id="chat-window" class="chat-window">
+    <div class="message left">
+      <div class="avatar-bg-model">
+        <img class="avatar-icon-chat" src="assets/logo_image.svg" alt="Avatar 1">
+        <p class="avatar-text-chat">Logobrand</p>
+      </div>
+      <div class="icons-tools-chat">
+        <div class="bg-icon-copy">
+          <img class="icon-copy" src="assets/icon_copy.svg" alt="Icon Copy">
+        </div>
+        <div class="bg-icon-copy">
+          <img class="icon-listen" src="assets/icon_listen.svg" alt="Icon Listen">
+        </div>
+      </div>
+      <div class="bubble left-bubble">
+        <div>
+          <p>Parrafo 1 At the heart of our innovative platform lies the power of OpenAI's GPT engine, a cornerstone of
+            artificial support. But we didn't stop there. But we didn't stop there But we didn't stop there But we
+            didn't
+            stop there But we didn't stop there But we didn't stop there</p>
+        </div>
+      </div>
+    </div>
+    <div class="message right">
+      <div class="bubble right-bubble">
+        <p>At the heart of our innovative platform lies the power of OpenAI's GPT engine, a cornerstone of artificial
+          support. But we didn't stop there. At the heart of our innovative platform lies the power of OpenAI's</p>
+      </div>
+      <div class="avatar-bg-user">
+        <img class="user-avatar-chat" src="assets/image_user_chat.svg" alt="Avatar 2">
+      </div>
+    </div>
+    <div class="message left">
+      <div class="avatar-bg-model">
+        <img class="avatar-icon-chat" src="assets/logo_image.svg" alt="Avatar 1">
+        <p class="avatar-text-chat">Logobrand</p>
+      </div>
+      <div class="icons-tools-chat">
+        <div class="bg-icon-copy">
+          <img class="icon-copy" src="assets/icon_copy.svg" alt="Icon Copy">
+        </div>
+        <div class="bg-icon-copy">
+          <img class="icon-listen" src="assets/icon_listen.svg" alt="Icon Listen">
+        </div>
+      </div>
+      <div class="bubble left-bubble">
+        <p>At the heart of our innovative platform lies the power of OpenAI's GPT engine, a cornerstone of artificial
+          support. But we didn't stop there.</p>
+      </div>
+    </div>
+    <div class="message right">
+      <div class="bubble right-bubble">
+        <p>At the heart of our innovative platform lies the power of OpenAI's GPT engine, a cornerstone of artificial
+          support. But we didn't stop there. At the heart of our innovative platform lies the power of OpenAI's GPT
+          engine, a cornerstone of artificial support. But we didn't stop there, At the heart of our innovative platform
+          lies the power of OpenAI's GPT engine, a cornerstone of artificial support. But we didn't stop there</p>
+      </div>
+      <div class="avatar-bg-user">
+        <img class="user-avatar-chat" src="assets/image_user_chat.svg" alt="Avatar 2">
+      </div>
+    </div>
+    <div class="message left">
+      <div class="avatar-bg-model">
+        <img class="avatar-icon-chat" src="assets/logo_image.svg" alt="Avatar 1">
+        <p class="avatar-text-chat">Logobrand</p>
+      </div>
+      <div class="icons-tools-chat">
+        <div class="bg-icon-copy">
+          <img class="icon-copy" src="assets/icon_copy.svg" alt="Icon Copy">
+        </div>
+        <div class="bg-icon-copy">
+          <img class="icon-listen" src="assets/icon_listen.svg" alt="Icon Listen">
+        </div>
+      </div>
+      <div class="bubble left-bubble">
+        <p>At the heart of our innovative platform lies the power of OpenAI's GPT engine, a cornerstone of artificial
+          support. But we didn't stop there. But we didn't stop there But we didn't stop there But we didn't stop there
+          But we didn't stop there But we didn't stop there</p>
+      </div>
+    </div>
+  </div>
+  <div id="chat-input" class="chat-input">
+    <div class="bg-icon-attach">
+      <img class="icon-attach" src="assets/icon_attachment.svg" alt="Icon Attach">
+      <div id="popup-menu" class="popup-menu">
+        <div class="menu-item" onclick="document.getElementById('picture-input').click() ">
+          <svg class="icon-picture" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="7.4047mm"
+            height="6.9559mm" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; clip-rule:evenodd"
+            viewBox="0 0 14.02 13.17">
+            <g id="Capa_x0020_1">
+              <path class="fil0"
+                d="M7.02 12.2c1.84,0 3.68,0 5.52,-0 0.38,0 0.51,-0.13 0.51,-0.52 0,-1.07 0,-2.14 -0.01,-3.21 -0,-0.1 -0.05,-0.22 -0.12,-0.29 -0.71,-0.72 -1.43,-1.44 -2.15,-2.15 -0.31,-0.31 -0.48,-0.31 -0.79,0 -1.27,1.27 -2.54,2.54 -3.81,3.81 -0.31,0.31 -0.55,0.31 -0.86,-0 -0.68,-0.68 -1.35,-1.35 -2.03,-2.03 -0.25,-0.25 -0.46,-0.25 -0.7,-0 -0.5,0.5 -1,1 -1.49,1.5 -0.07,0.07 -0.12,0.19 -0.12,0.29 -0.01,0.67 -0.01,1.34 -0.01,2.01 0,0.47 0.11,0.58 0.57,0.58 1.83,0 3.65,0 5.48,0zm6.02 -5.26c0.01,-0.08 0.02,-0.11 0.02,-0.14 0,-1.8 0,-3.6 -0,-5.39 0,-0.3 -0.15,-0.44 -0.48,-0.44 -3.7,-0 -7.4,-0 -11.11,-0 -0.37,0 -0.5,0.13 -0.5,0.5 -0,2.13 -0,4.25 0,6.38 0,0.06 0.01,0.12 0.02,0.21 0.35,-0.35 0.66,-0.67 0.98,-0.98 0.56,-0.54 1.36,-0.54 1.92,-0.01 0.2,0.19 0.39,0.38 0.58,0.57 0.42,0.42 0.84,0.85 1.31,1.31 0.06,-0.08 0.1,-0.16 0.15,-0.21 1.14,-1.15 2.29,-2.29 3.43,-3.44 0.21,-0.21 0.45,-0.37 0.75,-0.43 0.48,-0.09 0.91,0.03 1.25,0.38 0.55,0.55 1.09,1.1 1.68,1.69zm-6.03 6.23c-1.83,0 -3.67,0 -5.5,0 -0.94,-0 -1.5,-0.56 -1.5,-1.5 -0,-3.39 -0,-6.77 0,-10.16 0,-0.94 0.57,-1.5 1.51,-1.5 3.67,0 7.33,0 11,0 0.95,0 1.52,0.56 1.52,1.52 0,3.38 0,6.76 0,10.14 0,0.95 -0.56,1.51 -1.52,1.52 -1.83,0 -3.67,0 -5.5,0l0 -0z" />
+              <path class="fil0"
+                d="M5.29 5.05c0.58,0 1.03,-0.45 1.03,-1.03 0,-0.57 -0.46,-1.03 -1.03,-1.04 -0.57,-0 -1.03,0.46 -1.03,1.03 -0,0.58 0.45,1.03 1.03,1.03zm-0 -3.02c1.1,-0.01 1.98,0.87 2,1.97 0.01,1.1 -0.88,2.01 -1.98,2.01 -1.09,0.01 -2,-0.9 -2,-2 0,-1.09 0.89,-1.98 1.99,-1.98z" />
+            </g>
+          </svg>
+          <input type="file" id="picture-input" style="display: none;">
+          <span>Picture</span>
+        </div>
+        <div class="menu-item" onclick="document.getElementById('file-input').click()">
+          <svg class="icon-file" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="6.4279mm"
+            height="8.0809mm" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 10.59 13.32">
+            <g id="Capa_x0020_1">
+              <path class="fil0"
+                d="M8.86 3.41c-0.58,-0.56 -1.11,-1.08 -1.68,-1.63 0,0.51 0,0.96 0,1.42 0,0.15 0.07,0.22 0.22,0.22 0.31,-0 0.61,-0 0.92,-0 0.16,0 0.33,0 0.54,0zm-2.7 -2.39l-0.19 0c-1.54,0 -3.09,0 -4.63,0 -0.26,0 -0.29,0.03 -0.29,0.29 -0,3.56 -0,7.12 0,10.68 0,0.26 0.03,0.29 0.29,0.29 2.65,0 5.3,0 7.95,0 0.25,0 0.29,-0.03 0.29,-0.29 0,-2.45 0,-4.91 0,-7.36l0 -0.19 -0.22 0c-0.65,0 -1.3,0 -1.95,-0 -0.72,-0 -1.23,-0.51 -1.24,-1.23 -0.01,-0.48 -0,-0.97 -0,-1.45 0,-0.24 0,-0.47 0,-0.74zm-6.15 5.62c0,-1.8 -0,-3.6 0,-5.39 0,-0.61 0.36,-1.08 0.93,-1.21 0.12,-0.03 0.25,-0.03 0.38,-0.03 1.64,-0 3.27,0 4.91,-0 0.42,-0 0.75,0.14 1.05,0.43 0.97,0.96 1.95,1.9 2.93,2.84 0.27,0.26 0.39,0.57 0.39,0.93 0,2.63 0,5.26 0,7.88 -0,0.71 -0.52,1.22 -1.24,1.23 -0.87,0.01 -1.74,0 -2.61,0 -1.8,0 -3.6,-0.02 -5.39,0.01 -0.84,0.01 -1.36,-0.6 -1.34,-1.35 0.02,-1.77 0.01,-3.55 0.01,-5.32z" />
+            </g>
+          </svg>
+          <input type="file" id="file-input" style="display: none;">
+          <span>File</span>
+        </div>
+        <div class="menu-item" onclick="document.getElementById('photo-input').click()">
+          <svg class="icon-photo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="8.506mm"
+            height="6.9937mm" version="1.1"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 18.45 15.17">
+            <g id="Capa_x0020_1">
+              <path class="fil0"
+                d="M9.2 13.84c2.4,0 4.79,0 7.19,-0 0.47,0 0.74,-0.25 0.74,-0.72 0,-2.59 0,-5.18 0,-7.77 0,-0.47 -0.27,-0.73 -0.74,-0.73 -0.53,-0 -1.07,0 -1.6,-0 -0.89,-0 -1.58,-0.47 -1.92,-1.29 -0.21,-0.51 -0.41,-1.02 -0.61,-1.53 -0.13,-0.32 -0.35,-0.48 -0.7,-0.48 -1.56,0 -3.12,0 -4.67,0 -0.35,0 -0.57,0.15 -0.7,0.48 -0.2,0.52 -0.41,1.03 -0.62,1.55 -0.33,0.8 -1.02,1.27 -1.89,1.27 -0.51,0 -1.02,0 -1.54,0 -0.59,0 -0.83,0.23 -0.83,0.82 -0,2.53 -0,5.06 0,7.59 0,0.58 0.23,0.81 0.81,0.81 2.36,0 4.72,0 7.08,0zm0.02 1.33c-2.39,0 -4.78,0 -7.17,-0 -1.04,-0 -1.84,-0.65 -2.03,-1.64 -0.03,-0.14 -0.03,-0.3 -0.03,-0.44 -0,-2.57 -0,-5.14 0,-7.7 0,-1.23 0.83,-2.07 2.06,-2.08 0.53,-0 1.05,-0.01 1.58,0 0.36,0.01 0.59,-0.16 0.72,-0.48 0.2,-0.5 0.39,-0.99 0.59,-1.49 0.35,-0.86 1.02,-1.32 1.94,-1.32 1.55,-0.01 3.1,-0.01 4.65,0 0.93,0 1.6,0.47 1.94,1.32 0.2,0.49 0.39,0.98 0.59,1.46 0.15,0.38 0.33,0.5 0.75,0.5 0.5,0 1.01,-0 1.51,0 1.28,0 2.11,0.83 2.11,2.1 0,2.55 0,5.11 0,7.66 0,1.28 -0.83,2.11 -2.12,2.11 -2.37,0 -4.74,0 -7.1,0z" />
+              <path class="fil0"
+                d="M5.93 7.9c-0,1.82 1.47,3.3 3.29,3.31 1.81,0 3.29,-1.47 3.3,-3.27 0.01,-1.82 -1.46,-3.31 -3.28,-3.32 -1.82,-0.01 -3.31,1.47 -3.31,3.28zm3.29 -4.6c2.53,-0.01 4.62,2.06 4.62,4.61 0.01,2.53 -2.07,4.62 -4.61,4.62 -2.54,0.01 -4.61,-2.06 -4.62,-4.61 -0.01,-2.54 2.06,-4.61 4.61,-4.62z" />
+            </g>
+          </svg>
+          <input type="file" id="photo-input" style="display: none;">
+          <span>Photo</span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-icon-attach" onclick="toggleMenu()">
+      <img class="icon-attach" src="assets/icon_attachment.svg" alt="Icon Attach">
+    </div>
+    <input type="text" placeholder="Start a chat...">
+    <div class="bg-icons-tools">
+      <img class="smile-button" src="assets/smile_icon.png">
+      <img class="microphone-button" src="assets/icon_microphone.svg">
+    </div>
+  </div>
+  <footer>
+    <script src="script.js"></script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat UI</title>
+  <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+  <header class="chat-header">
+    <div class="menu-hamburguer">
+      <img class="menu-hamburguer-icon" src="assets/icon_menu_hamburguer.svg" alt="Menu hamburguer">
+    </div>
+    <div class="logo-brand-section">
+      <div class="logo-brand">
+        <img class="logo-image" src="assets/logo_image.webp" alt="Logobrand">
+        <p class="logo-text">Logobrand</p>
+      </div>
+      <div class="divider"></div>
+      <p class="header-text">Avatar Buddy Demo</p>
+    </div>
+    <div class="user-info" id="user-info">
+      <p class="user-name-info-section">Hi, <span class="user-name-info">Nico Buddy!</span></p>
+      <img class="user-avatar" src="assets/icon_user_register.svg" alt="User Avatar">
+    </div>
+  </header>
+  <div class="overlay" id="overlay" style="display: none;"></div>
+  <div class="overlay" id="overlay2" style="display: none;"></div>
+  <div class="popup-user-info" id="popup-user-info" style="display: none;">
+    <img class="icon-edit-avatar" src="assets/icon_edit_avatar.svg" alt="Edit Avatar">
+    <img class="popup-user-avatar" src="assets/icon_user_register_sidebar.svg" alt="User Avatar">
+    <p class="popup-user-name">Lorem Ipsum</p>
+    <button class="popup-button-first">Lorem Ipsum</button>
+    <button class="popup-button-second">Lorem Ipsum</button>
+    <div class="separator-popup"></div>
+    <p class="sign-out-popup">Sign out</p>
+  </div>
+  <div id="sidebar" class="sidebar">
+    <div class="header-sidebar">
+      <img class="avatar-sidebar" src="assets/icon_user_register_sidebar.svg" alt="User Avatar">
+      <p class="user-name-sidebar"><span class="text-user-sidebar">Hi Buddy,</span><br>this is your<br>control panel</p>
+    </div>
+    <div class="body-sidebar">
+      <p>Choose your Buddy</p>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <img class="avatar-choose-buddy" src="assets/icon_choose_buddy.svg" alt="Avatar">
+          Dr. Jaquie <img class="icon-arrow-down" src="assets/icon_arrow_down.svg" alt="Arrow Down">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Buddy Number 1</a>
+          <a href="#">Buddy Number 2</a>
+          <a href="#">Buddy Number 3</a>
+          <a href="#">Buddy Number 4</a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <p>Choose voice</p>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <img class="avatar-choose-buddy" src="assets/icon_choose_buddy.svg" alt="Avatar">
+          Dr. Jaquie <img class="icon-arrow-down" src="assets/icon_arrow_down.svg" alt="Arrow Down">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Buddy Number 1</a>
+          <a href="#">Buddy Number 2</a>
+          <a href="#">Buddy Number 3</a>
+          <a href="#">Buddy Number 4</a>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="body-sidebar-tools">
+        <div class="sound-sidebar">
+          <div class="sound-sidebar-title">
+            <p>Sound</p>
+            <img src="assets/icon_sound.svg" alt="Sound">
+          </div>
+          <div class="switch" id="switch-sound"></div>
+        </div>
+        <div class="separator-v"></div>
+        <div class="mode-sidebar">
+          <div class="mode-sidebar-title">
+            <p>Light mode</p>
+            <img src="assets/icon_light.svg" alt="Light">
+          </div>
+          <div class="switch" id="switch-mode"></div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <p>Accesibility features</p>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <img class="avatar-choose-buddy" src="assets/icon_choose_bg.svg" alt="Avatar">
+          All text <img class="icon-arrow-down" src="assets/icon_arrow_down.svg" alt="Arrow Down">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Buddy Number 1</a>
+          <a href="#">Buddy Number 2</a>
+          <a href="#">Buddy Number 3</a>
+          <a href="#">Buddy Number 4</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-sidebar">
+      <img class="icon-user" src="assets/icon_user.svg" alt="User">
+      <div class="separator-v-footer"></div>
+      <img class="icon-trash" src="assets/icon_trash.svg" alt="Trash">
+      <div class="separator-v-footer"></div>
+      <img class="icon-exit" src="assets/icon_exit.svg" alt="Exit">
+    </div>
+  </div>
+  <section class="settings_account">
+    <h2 class="account-title">Profile picture</h2>
+    <p class="account-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    <img class="edit-avatar-acount" src="assets/icon_edit_avatar-account.svg">
+    <img class="avatar-acount" src="assets/icon_user_register_sidebar.svg">
+    <p class="account-role">Admin</p>
+    <div class="switch" id="switch-account"></div>
+    <div class="separator-account"></div>
+    <p class="account-recommendation">Or choose a personal avatar</p>
+    <div class="section-avatars-account">
+      <img class="avatar-account-1" src="assets/icon_user_register_sidebar.svg">
+      <img class="avatar-account-2" src="assets/icon_user_register_sidebar.svg">
+      <img class="avatar-account-3" src="assets/icon_user_register_sidebar.svg">
+    </div>
+    <div class="separator-account"></div>
+    <h2 class="account-title-2">Interface style</h2>
+    <div class="separator-account"></div>
+    <div class="section-settings-style">
+      <div class="settings-color">
+        <p class="title-settings-color">Change color</p>
+        <div class="selector-color-container">
+          <button class="selector-color"></button>
+          <input type="color" id="favcolor" class="color-picker" name="favcolor" value="#ff0000">
+        </div>
+        <p id="colorHex" class="hex-color">Hex #BB12FF</p>
+      </div>
+      <div class="settings-logo">
+        <p class="title-settings-logo">Change logo</p>
+        <img class="icon-change-logo" src="assets/icon_change_logo.svg" alt="Change Logo">
+        <p id="type_file_logo" class="type_file_logo">Mastercard.png</p>
+      </div>
+    </div>
+    <button class="account-button">Lorem Ipsum</button>
+  </section>
+  <footer>
+    <script src="script.js"></script>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+/*Style Layout_1*/
+@font-face {
+    font-family: 'MuseoSansRounded';
+    src: url('Fonts/MuseoSansRounded500.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansRounded';
+    src: url('Fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/background_design.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'MuseoSansRounded', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.header-welcome {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #BB12FF;
+    padding: 20px;
+    text-align: center;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'MuseoSansRounded', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+}
+
+p {
+    font-family: 'MuseoSansRounded', sans-serif;
+    font-weight: 400;
+}
+
+.welcome-text-container {
+    position: relative;
+}
+
+.welcome-text {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+}
+
+.welcome-text-2 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
+
+span.logo-text {
+    z-index: 99;
+    top: -10px;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(255, 3, 255);
+}
+
+.welcome-section {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.forgot-password {
+    cursor: pointer;
+    font-family: 'MuseoSansRounded', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: right;
+    margin-right: 150px;
+}
+
+input {
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #282063;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 350px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: #282063;
+    padding-left: 30px;
+    font-weight: 600;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+.password-container {
+    position: relative;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+.form-signup,
+.form-login {
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    position: relative;
+    z-index: 99;
+    margin-top: 20px;
+    display: none;
+}
+
+.dont-have-account-text,
+.have-account-text {
+    display: none;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.signup-now,
+.login-now {
+    color: rgb(255, 3, 255);
+    cursor: pointer;
+}
+
+.activeText {
+    display: none;
+}
+
+.avatar_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.logo_img {
+    width: 100px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.avatar_woman_img {
+    position: absolute;
+    right: 90px;
+    width: 200px;
+    margin-bottom: 5px;
+    top: -50px;
+}
+
+.avatar_man_img {
+    position: absolute;
+    margin-top: 170px;
+    width: 300px;
+    margin-left: 90px;
+}
+
+.div_avatar_man {
+    position: relative;
+}
+
+.div_avatar_woman {
+    position: relative;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.login-btn,
+.signup-btn {
+    font-family: 'MuseoSansRounded', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0285A3 0%, #02BBDF 100%);
+    border: 3px solid #4e72ec;
+    border-top: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-btn:hover {
+    background-color: #2aa4e0;
+}
+
+.button-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.eye-visible,
+.eye-hidden {
+    margin-top: 5px;
+    width: 23px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .welcome-text {
+        font-size: 30px;
+    }
+
+    .welcome-text-2 {
+        font-size: 12px;
+    }
+
+    span.logo-text {
+        font-size: 50px;
+    }
+
+    input, .password-container {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .forgot-password {
+        margin-right: 5%;
+    }
+
+    .avatar_woman_img, .avatar_man_img {
+        display: none;
+    }
+
+    .login-btn, .signup-btn {
+        width: 90%;
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-text {
+        font-size: 24px;
+    }
+
+    span.logo-text {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

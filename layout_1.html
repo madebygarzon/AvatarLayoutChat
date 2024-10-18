@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Buddy Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-welcome">
+        <p class="header-text">Avatar Buddy Demo</p>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <div class="avatar_container">
+                <div class="div_avatar_woman">
+                    <img class="avatar_woman_img" src="assets/icon_woman.webp" alt="Avatar 1">
+                </div>
+                <div class="logo">
+                    <img src="assets/avatar_icon.webp" alt="Avatar Buddy Logo">
+                </div>
+                <div class="div_avatar_man">
+                    <img class="avatar_man_img" src="assets/icon_man.webp" alt="Avatar 2">
+                </div>
+            </div>
+            <div class="welcome-text-container">
+                <p class="welcome-text">Welcome to<br><span class="logo-text">Avatar Buddy Demo</span></p>
+            </div>
+            <div class="form-section">
+                <p class="welcome-text-2">Please login to your account<br> or create an account to get started</p>
+                <form class="form-login" action="">
+                    <input type="text" placeholder="Email address">
+                    <div class="password-container">
+                        <input type="password" id="login-password" placeholder="Password">
+                        <span class="toggle-password" id="toggleLoginPassword">
+                            <img class="eye-visible" src="assets/eye-visible.svg" alt="Show Password">
+                        </span>
+                    </div>
+                    <p class="forgot-password">Forgot your password?</p>
+                </form>
+                <form class="form-signup" action="">
+                    <input type="text" placeholder="Name / Company name">
+                    <input type="text" placeholder="Email address">
+                    <div class="password-container">
+                        <input type="password" id="signup-password" placeholder="Password">
+                        <span class="toggle-password" id="toggleSignupPassword">
+                            <img class="eye-visible" src="assets/eye-visible.svg" alt="Show Password">
+                        </span>
+                    </div>
+                </form>
+                <div class="button-container">
+                    <button class="login-btn">Login</button>
+                    <p class="dont-have-account-text">Don`t have an account. <span class="signup-now">Sign up now</span>
+                    </p>
+                    <button class="signup-btn">Sign up</button>
+                    <p class="have-account-text">Already have an account. <span class="login-now">Login now</span></p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <script src="script.js"></script>
+    </footer>
+</body>
+
+</html>
